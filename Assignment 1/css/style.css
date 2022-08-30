@@ -23,10 +23,20 @@ body {
     margin: 0 auto;
     padding: 0 8px;
     background-color: #7e8a8d;
-    color: #000000;
+    color: #a09b9b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+  }
 
 nav a:hover,
 nav a:active {
