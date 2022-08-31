@@ -4,16 +4,8 @@ html {
     font-size: 16px;
 }
 
-html,
-body,
-header,
-nav,
-main,
-footer,
-div,
-section,
-article,
-aside {
+/*All elements */
+* {
     margin: 0;
     padding: 0;
 }
@@ -22,7 +14,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 8px;
-    background-color: #7e8a8d;
+    background-color: #70757c;
     color: #a09b9b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -33,15 +25,33 @@ img {
     float: right;
 }
 
-/* Right-aligned section inside the top navigation */
+/* Förnuvarande en float. 
+Men behövs nog ej mer avancerade saker i detta fall */
 .topnav-right {
     float: right;
-  }
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 nav a:hover,
 nav a:active {
     background-color: #556fe2;
     color: #8bdbe6;
+}
+header {
+    padding: 20px 20px;
+  }
+
+/*Bild för background image */
+main {
+    background-image: url("../img/background.png");
+    border-radius: 2%;
+}
+
+.topnav-right a {
+    text-decoration: none;
+    color: #a09b9b;
 }
 
 #thisPage {

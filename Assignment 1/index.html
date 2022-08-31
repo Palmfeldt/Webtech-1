@@ -2,7 +2,7 @@
 <html lang="sv">
 
 <head>
-    <title>Assingment 1</title>
+    <title>Assignment 1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -11,24 +11,48 @@
 <body>
     <nav class="topnav-right">
         <ul>
-            <li><a href="index.html" id="currentPage">TestSida</a></li>
-            <li><a href="q1.html" >Question 1</a></li>
-            <li><a href="q2.html" >Question 2</a></li>
+            <li><a href="index.html" id="currentPage">Startsida och fråga 1</a></li>
+            <li><a href="q1.html">Fråga 2</a></li>
+            <li><a href="q2.html">Fråga 3</a></li>
         </ul>
     </nav>
+
     <header>
-        <h1>Lorem</h1>
+        <h1>Startsida och fråga 1</h1>
     </header>
     <main>
-        <img src="img/kyrka golv portrett.jpg" alt="kyrka" class="img">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet lectus non est accumsan
-            bibendum in ultricies tortor. Etiam</p>
-        <p> Duis in nisi felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-            Donec diam enim, porttitor ut ex vitae, feugiat vulputate erat. Nam maximus rutrum eros quis accumsan.
-            Vivamus vel congue nulla, vestibulum rutrum purus.</p>
-        <h2>Lorem</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos itaque hic laborum amet natus beatae eum
-            iste deserunt assumenda accusamus ea architecto atque, dicta, a dolore ab rem quisquam delectus?</p>
+
+
+            <h3>Vad avses med termerna klient och server?</h2>
+            
+            <p>Klienten avser den enhet som hämtar information ifrån en server. Beroende på vilket sammanhang så kan
+                detta vara webbläsaren, operativsystemet eller enheten i säg själv som talas om.
+                Servern delar ut (Hosting) data. En server hostar till exempel webtjänster, filserver, spel etcetera.
+                Alla hemsidor som syns på internet körs på någon form av server.
+            </p>
+            <h3>Beskriv vad var och en av protokollen TCP och IP gör på sändande och mottagande sida.</h2>
+            <p>TCP (Transmission Control Protokoll) är ett dataöverföringsprotokoll på transport lagret i TCP/IP
+                modellen. Protokollet är grunden till andra applikationsprotokoll så som tex http. Protokollet har error
+                checking och skickar om packet (uppdelad data) om de skulle försvinna, ta för långt tid eller bli
+                korrupterade under sändningen. Protokollet använder sig av en den så kallade ”three way handshake” som
+                skickar SYN, SYN ACK och ACK som responskoder. Detta signalerar för klienten och server när en koppling
+                har lyckats göras.
+                IP (Internet protocol) är ett kommunikationsprotokoll som ligger på internet lagret i TCP/IP modellen.
+                Den hanterar skickandet av packet från klienten till server (samt vice versa, eller flera enheter
+                samtidigt)
+            </p>
+            <h3>Beskriv de delar som följande url består av:</h2>
+            <p>
+                http://webbteknik.abc.se:8082/kurs1/uppg/u1.html#fragor
+                Ta upp alla delar som åtskiljs av / . : och #
+                Den första delen ”http://” berättar för webbläsaren vilket protokoll som kommer användas.
+                Den andra delen ”webbteknik.abc.se” visar subdomänen (webbteknik.), domain adressen ”abc” och toppdomän
+                adressen ”.se”
+                Den sista delen ” kurs1/uppg/” beskriver vilken directory i server som ska hämtas, lika som hur mappar
+                funkar i många operativsystem. Slutligen så hämtas filen u1.html och en URI fragment som är ”#fragor”
+                vilket hänvisar var den ska börja visa information på sida.
+                </p>
+        <img src="img/kyrka golv portrett.jpg" alt="kyrkogolv" class="img">
     </main>
     <footer>
         TestSida.
