@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Layout ----- */
+
+body {
+    background-image: url("../img/background.png");
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 180px minmax(auto,820px) auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+        "header header header header"
+        ".      nav    main   ."
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+}
+header h1,
+header h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    grid-area: main;
+    background-color: #faf6e6;
+    padding: 10px;
+}
+
+/* ----- Navigeringen ----- */
+
+#menuicon {
+    display: none;
+}
+#menucheckbox {
+    display: none;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #81e3aa;
+    font-size: 1.1em;
+}
+
+nav ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* flex i ul gör li-elementen till "flexboxar" */
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+nav a {
+    color: #666666;
+    padding: 0.4em;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li img {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+nav a:hover {
+    background-color: #20985a;
+    color: #e3eed7;
+}
+
+nav a.thisPage {
+    background-color: #1e39d0;
+    color: #ffffff;
+}
+
+/* ----- Media queries ----- */
+
+nav img {
+    max-height: 25%;
+    max-width: 25%;
+
+    width: 120px;
+    border: 2px solid #960;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 740px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content auto min-content;
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #menuicon {
+        background-image: url(../img/menuicon.png);
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    #menucheckbox ~ ul {
+        display: none;
+    }
+    #menucheckbox:checked ~ ul {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+}
