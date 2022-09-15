@@ -6,24 +6,34 @@ html {
     font-size: 16px;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
-html, body, nav, header, main, aside, footer, article, section, div {
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ----- Layout ----- */
+/* Layout */
 
 body {
     background-image: url("../img/background.png");
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
-    grid-template-columns: auto 180px minmax(auto,820px) auto;
+    grid-template-columns: auto 180px minmax(auto, 820px) auto;
     grid-template-rows: min-content auto min-content;
     grid-template-areas:
         "header header header header"
@@ -36,7 +46,11 @@ header {
     background-color: #333333;
     color: #ffffff;
     padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
+
 header h1,
 header h2 {
     max-width: 1000px;
@@ -45,30 +59,42 @@ header h2 {
 
 main {
     grid-area: main;
-    background-color: #faf6e6;
+    background-color: #e6f8fa;
     padding: 10px;
 }
 
-/* ----- Navigeringen ----- */
+/* För menyn */
 
 #menuicon {
     display: none;
 }
+
 #menucheckbox {
     display: none;
 }
 
+/*För menyn hover */
+nav a:hover {
+    background-color: #207698;
+    color: #e3eed7;
+}
+
+nav a.currentPage {
+    background-color: #154f66;
+    color: #ffffff;
+}
+
 nav {
     grid-area: nav;
-    background-color: #81e3aa;
+    background-color: #96c7ce;
     font-size: 1.1em;
 }
 
-nav ul { 
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* flex i ul gör li-elementen till "flexboxar" */
+    display: flex;
     flex-direction: column;
     gap: 1em;
 }
@@ -81,37 +107,56 @@ nav a {
     display: block;
 }
 
-nav ul li img {
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+
+/*Foten på sidan */
+footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: #cccccc;
+    padding: 10px;
+    text-align: center;
 }
 
-
-nav a:hover {
-    background-color: #20985a;
-    color: #e3eed7;
+.centrum {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-nav a.thisPage {
-    background-color: #1e39d0;
-    color: #ffffff;
-}
+/*Bilder*/
 
-/* ----- Media queries ----- */
-
-nav img {
-    max-height: 25%;
-    max-width: 25%;
-
+.imgs {
     width: 120px;
-    border: 2px solid #960;
+    border: 2px solid rgb(0, 110, 153);
     border-radius: 5px;
+    display: flex;
+    transition: all 150ms ease;
 }
 
+.imgs:hover{
+    transform: scale(1.4);  
+    cursor: pointer;
+    
+ }
+
+
+/* För att bilderna ska vara sida om sida*/
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+   
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*Använt från labben, för mobila enheter och mindre fönster */
 @media screen and (max-width: 740px) {
     body {
         grid-template-columns: auto;
@@ -122,6 +167,7 @@ nav img {
             "main"
             "footer";
     }
+
     nav ul {
         flex-direction: row;
         justify-content: flex-end;
@@ -130,18 +176,22 @@ nav img {
 
 @media screen and (max-width: 400px) {
     #menuicon {
+        /*Bra image som återanvänds*/
         background-image: url(../img/menuicon.png);
         width: 24px;
         height: 24px;
         display: inline-block;
         cursor: pointer;
     }
-    #menucheckbox ~ ul {
+
+    #menucheckbox~ul {
         display: none;
     }
-    #menucheckbox:checked ~ ul {
+
+    #menucheckbox:checked~ul {
         display: flex;
     }
+
     nav ul {
         flex-direction: column;
         gap: 0;
