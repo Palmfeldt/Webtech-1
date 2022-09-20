@@ -33,11 +33,11 @@ body {
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
-    grid-template-columns: auto 180px minmax(auto, 820px) auto;
+    grid-template-columns: auto 150px minmax(auto, 820px) auto;
     grid-template-rows: min-content auto min-content;
     grid-template-areas:
         "header header header header"
-        ".      nav    main   ."
+        ".      nav    main      ."
         "footer footer footer footer";
 }
 
@@ -76,7 +76,7 @@ main {
 /*För menyn hover */
 nav a:hover {
     background-color: #207698;
-    color: #e3eed7;
+    color: #000000; 
 }
 
 nav a.currentPage {
@@ -85,6 +85,11 @@ nav a.currentPage {
 }
 
 nav {
+    border-style: solid;
+    border-color: #154f66;
+    border-radius: 5px;
+    border-bottom-style: none;
+    border-top-style: none;
     grid-area: nav;
     background-color: #96c7ce;
     font-size: 1.1em;
@@ -134,11 +139,11 @@ footer {
     transition: all 150ms ease;
 }
 
-.imgs:hover{
-    transform: scale(1.4);  
+.imgs:hover {
+    transform: scale(1.4);
     cursor: pointer;
-    
- }
+
+}
 
 
 /* För att bilderna ska vara sida om sida*/
@@ -146,7 +151,7 @@ footer {
     float: left;
     width: 33.33%;
     padding: 5px;
-   
+
 }
 
 .row::after {
