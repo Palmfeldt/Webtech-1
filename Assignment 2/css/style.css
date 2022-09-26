@@ -145,6 +145,10 @@ footer {
 
 }
 
+.question {
+    font-size: 18px;
+}
+
 
 /* För att bilderna ska vara sida om sida*/
 .column {

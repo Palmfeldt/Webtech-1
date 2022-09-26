@@ -15,9 +15,9 @@
         <label for="menucheckbox" id="menuicon"></label>
         <input type="checkbox" id="menucheckbox">
         <ul>
-            <li><a href="index.html"  class="currentPage">Fråga 1</a></li>
-            <li><a href="q2.html" >Fråga 2</a></li>
-            <li><a href="q3.html" >Fråga 3</a></li>
+            <li><a href="index.html" class="currentPage">Fråga 1</a></li>
+            <li><a href="q2.html">Fråga 2</a></li>
+            <li><a href="q3.html">Fråga 3</a></li>
         </ul>
     </nav>
     <header>
@@ -25,27 +25,33 @@
     </header>
     <main>
         <h2>Fråga 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quaerat deleniti unde minus voluptas id
-            distinctio consectetur voluptatibus iste eligendi? Maiores, magni blanditiis! Animi, corporis! Quod nihil
-            incidunt eligendi sed?</p>
-        <p>Praesentium atque tempora sed odit sapiente neque, magnam, vero officia quas, mollitia facere? Quisquam
-            impedit neque et labore sequi maxime nemo aliquam, dolor magni harum illo optio sit ratione. Molestias!</p>
-        <p>Accusamus autem quo quos explicabo expedita adipisci voluptatum possimus sapiente, suscipit mollitia minus
-            quia obcaecati aspernatur porro inventore. Saepe sit ea ex corporis laborum velit illum, iusto odit incidunt
-            vitae.</p>
+
+        <li class="question">Då man skapar en layout med <em>grid</em> används bl.a. CSS-egenskaperna <em>grid-template-columns</em>,
+            <em>grid-template-rows</em> och <em>grid-template-areas</em>. Beskriv vad dessa används till.
+        </li>
+        <p>Grid template (colums, rows) specifierar antal och storleken på rows och colums i en grid layout d.v.s.
+            display:grid. De kan specificeras med values så som length men även max-content (som utökar sig till
+            maxstorleken till innehållet den anpassar) etcetera. Areas bestämmer namnet på de olika boxarna. </p>
+
+        <li class="question">Vad är en <em>media query</em> och vad används den till?</li>
+        <p>Media queries är hur en hemsida kan anpassa sig till olika enheter och dess skärmar. Detta görs i CSS och det
+            kan kolla brädden och längden av skärmar, resolutionen, skärmorientering (d.v.s. portrait eller landscape
+            mode) etcetera. I detta fall finns det tre sätt som denna hemsida anpassar sig till. </p>
+
 
         <div class="row">
             <div class="column">
-              <img src="img/kyrka-golv-portrett.jpg" alt="kyrka golv portrett" class="imgs" style="width:100%">
+                <img src="img/kyrka-golv-portrett.jpg" alt="kyrka golv portrett" class="imgs" style="width:100%">
             </div>
             <div class="column">
-              <img src="img/kyrka-stol-portrett.jpg" alt="kyrka stol portrett" class="imgs" style="width:100%">
+                <img src="img/kyrka-stol-portrett.jpg" alt="kyrka stol portrett" class="imgs" style="width:100%">
             </div>
             <div class="column">
-              <img src="img/kyrka-tak-portrett.jpg" alt="kyrka-tak-portrett" class="imgs" style="width:100%">
+                <img src="img/kyrka-tak-portrett.jpg" alt="kyrka-tak-portrett" class="imgs" style="width:100%">
             </div>
-          </div>
+        </div>
     </main>
     <footer> Albin W. Palmfeldt - Assignment 2</footer>
 </body>
+
 </html>
