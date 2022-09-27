@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!--Worked upon lab 5d, used the same menu icon that was suppied-->
+    <title>Assignment 2</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <label for="menucheckbox" id="menuicon"></label>
+        <input type="checkbox" id="menucheckbox">
+        <ul>
+            <li><a href="index.html" class="currentPage">Fråga 1</a></li>
+            <li><a href="q2.html">Fråga 2</a></li>
+            <li><a href="q3.html">Fråga 3</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Startsida och fråga 1</h1>
+    </header>
+    <main>
+        <h2>Fråga 1</h2>
+
+        <li class="question">Då man skapar en layout med <em>grid</em> används bl.a. CSS-egenskaperna
+            <em>grid-template-columns</em>,
+            <em>grid-template-rows</em> och <em>grid-template-areas</em>. Beskriv vad dessa används till.
+        </li>
+        <p>Grid template (colums, rows) specificerar antal och storleken på rows och colums i en grid layout d.v.s.
+            display:grid. De kan specificeras med values så som length men även max-content (som utökar sig till
+            maxstorleken till innehållet den anpassar) etcetera. Areas definierar var och vad som finnas i rutnätet
+            (samt ger ”cellerna” namn).</p>
+
+        <li class="question">Vad är en <em>media query</em> och vad används den till?</li>
+        <p>Media queries är hur en hemsida kan anpassa sig till olika enheter och dess skärmar. Detta görs i CSS och det
+            kan kolla brädden och längden av skärmar, resolutionen, skärmorientering (d.v.s. portrait eller landscape
+            mode) etcetera. I detta fall finns det tre sätt som denna hemsida anpassar sig till. </p>
+
+
+        <div class="row">
+            <div class="column">
+                <img src="img/kyrka-golv-portrett.jpg" alt="kyrka golv portrett" class="imgs" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="img/kyrka-stol-portrett.jpg" alt="kyrka stol portrett" class="imgs" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="img/kyrka-tak-portrett.jpg" alt="kyrka-tak-portrett" class="imgs" style="width:100%">
+            </div>
+        </div>
+    </main>
+    <footer> Albin W. Palmfeldt - Assignment 2</footer>
+</body>
+
+</html>

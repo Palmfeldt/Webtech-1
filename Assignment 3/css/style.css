@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+
+body {
+    background-image: url("../img/background.png");
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 150px minmax(auto, 820px) auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+        "header header header header"
+        ".      nav    main      ."
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header h1,
+header h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    grid-area: main;
+    background-color: #e6f8fa;
+    padding: 10px;
+}
+
+/* För menyn */
+
+#menuicon {
+    display: none;
+}
+
+#menucheckbox {
+    display: none;
+}
+
+/*För menyn hover */
+nav a:hover {
+    background-color: #207698;
+    color: #000000; 
+}
+
+nav a.currentPage {
+    background-color: #154f66;
+    color: #ffffff;
+}
+
+nav {
+    border-style: solid;
+    border-color: #154f66;
+    border-radius: 5px;
+    border-bottom-style: none;
+    border-top-style: none;
+    grid-area: nav;
+    background-color: #96c7ce;
+    font-size: 1.1em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+nav a {
+    color: #666666;
+    padding: 0.4em;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*Foten på sidan */
+footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: #cccccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.centrum {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Bilder*/
+
+.imgs {
+    width: 120px;
+    border: 2px solid rgb(0, 110, 153);
+    border-radius: 5px;
+    display: flex;
+    transition: all 150ms ease;
+}
+
+.imgs:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+
+}
+
+.question {
+    font-size: 18px;
+}
+
+
+/* För att bilderna ska vara sida om sida*/
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*Använt från labben, för mobila enheter och mindre fönster */
+@media screen and (max-width: 740px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content auto min-content;
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #menuicon {
+        /*Bra image som återanvänds*/
+        background-image: url(../img/menuicon.png);
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #menucheckbox~ul {
+        display: none;
+    }
+
+    #menucheckbox:checked~ul {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+}
