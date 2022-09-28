@@ -29,15 +29,15 @@ div {
 /* Layout */
 
 body {
-    background-image: url("../img/background.png");
-    color: #000000;
+    background-image: url("../img/back.jpg");
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-columns: auto minmax(auto, 1000px) auto;
     grid-template-rows: min-content min-content auto min-content;
     grid-template-areas:
         "header header header"
-        "nav nav a"
+        "nav nav nav"
         ". main ."
         " footer footer footer";
 }
