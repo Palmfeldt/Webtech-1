@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Layout ----- */
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto minmax(auto, 1000px) auto;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+        ".      nav    ."
+        "header header header"
+        ".      main   ."
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+}
+
+header h1,
+header h2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    grid-area: main;
+    background-color: #faf6e6;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: #cccccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ----- Navigeringen ----- */
+
+nav {
+    grid-area: nav;
+    background-color: #81e3aa;
+}
+
+nav ul {
+    /* Båda ul-listorna */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    padding: 0.4em;
+}
+
+nav a:hover {
+    background-color: #20985a;
+    color: #e3eed7;
+}
+
+nav a.thisPage {
+    background-color: #1e39d0;
+    color: #ffffff;
+}
