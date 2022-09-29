@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css?family=Abyssinica+SIL&display=swap');
 /* ----- Grundstil för webbsidan ----- */
 
 html {
@@ -28,16 +28,20 @@ div {
 
 /* Layout */
 
+
+
 body {
     background-image: url("../img/back.jpg");
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-color: #207698;
+    background-size: 100%;
+    font-family: 'Abyssinica SIL', sans-serif;
     display: grid;
     grid-template-columns: auto minmax(auto, 1000px) auto;
     grid-template-rows: min-content min-content auto min-content;
     grid-template-areas:
         "header header header"
-        "nav nav nav"
+        ". nav ."
         ". main ."
         " footer footer footer";
 }
@@ -52,10 +56,16 @@ header {
     z-index: 999;
 }
 
-header h1,
+header h1 {
+    font-size: 45px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 header h2 {
     max-width: 1000px;
     margin: 0 auto;
+    font-size: 16px;
 }
 
 main {
@@ -76,8 +86,7 @@ main {
 
 /*För menyn hover */
 nav a:hover {
-    background-color: #207698;
-    color: #000000; 
+    text-decoration: underline;
 }
 
 nav a.currentPage {
@@ -98,6 +107,8 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap: 1em;
+
+    border: 2px solid #154f66;
 }
 
 
