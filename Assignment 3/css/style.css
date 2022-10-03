@@ -48,24 +48,23 @@ body {
 
 header {
     grid-area: header;
-    background-color: #333333;
+    background-color: #9cb2c7;
     color: #ffffff;
-    padding: 10px;
-    position: sticky;
+    padding: 5px;
+    border-bottom: 2px solid #585858;
     top: 0;
     z-index: 999;
 }
 
-header h1 {
-    font-size: 45px;
+header img {
     max-width: 1000px;
     margin: 0 auto;
-}
-
-header h2 {
-    max-width: 1000px;
-    margin: 0 auto;
-    font-size: 16px;
+    width:50%;
+    max-width: 200px;
+    z-index:0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {
@@ -90,13 +89,13 @@ nav a:hover {
 }
 
 nav a.currentPage {
-    background-color: #154f66;
+    background-color: rgb(7, 116, 160);
     color: #ffffff;
 }
 
 nav {
     grid-area: nav;
-    background-color: #96c7ce;
+    background-color: #a1bfdb;
     font-size: 1.1em;
 }
 
@@ -107,8 +106,8 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    border-bottom: #585858;
 
-    border: 2px solid #154f66;
 }
 
 
@@ -123,10 +122,11 @@ nav a {
 /*Foten på sidan */
 footer {
     grid-area: footer;
-    background-color: #333333;
+    background-color: #505c69;
     color: #cccccc;
     padding: 10px;
     text-align: center;
+    border-top: 2px solid #585858;
 }
 
 .centrum {
@@ -156,6 +156,18 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
+    header img {
+        max-width: 1000px;
+        margin: 0 auto;
+        width:50%;
+        max-width: 100px;
+        z-index:0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
     #menuicon {
         /*Bra image som återanvänds*/
         background-image: url(../img/menuicon.png);
