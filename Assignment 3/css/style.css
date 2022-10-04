@@ -33,7 +33,7 @@ div {
 body {
     background-image: url("../img/back.jpg");
     background-repeat: no-repeat;
-    background-color: #207698;
+    background-color: #92adaf;
     background-size: 100%;
     font-family: 'Abyssinica SIL', sans-serif;
     display: grid;
@@ -48,8 +48,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: #9cb2c7;
-    color: #ffffff;
+    background-color: #f2f5f8;
     padding: 5px;
     border-bottom: 2px solid #585858;
     top: 0;
@@ -69,7 +68,7 @@ header img {
 
 main {
     grid-area: main;
-    background-color: #e6f8fa;
+    background-color: #C8EAED;
     padding: 10px;
 }
 
@@ -96,7 +95,7 @@ nav a.currentPage {
 
 nav {
     grid-area: nav;
-    background-color: #a1bfdb;
+    background-color: #3FACBC;
     font-size: 1.1em;
 }
 
@@ -108,7 +107,6 @@ nav ul {
     flex-direction: row;
     gap: 1em;
     border-bottom: #585858;
-
 }
 
 
@@ -137,15 +135,35 @@ footer {
     width: 50%;
 }
 
-.posts {
+.qaTitle {
+    text-align: center;
 
+}
+.qa {
+    padding: 10px;
+    transition: height 1s ease;
+    overflow: hidden;
+}
+
+.qa:not([open])
+{
+    height: 1.25em;
+}
+
+.qa[open]
+{
+    height: 2.50em;
+}
+
+.posts {
     border-radius: 10px;
     border-style: solid;
     border-width: thin;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 20px;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
 }
 
 .posts img {
@@ -157,12 +175,11 @@ footer {
 }
 
 .posts h3,
-.posts p{
+.posts p {
     margin-left: 15px;
     display: block;
     margin: 2px 0 0 0;
 }
-
 
 
 /*Använt från labben, för mobila enheter och mindre fönster */
