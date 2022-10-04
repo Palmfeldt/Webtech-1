@@ -59,9 +59,9 @@ header {
 header img {
     max-width: 1000px;
     margin: 0 auto;
-    width:50%;
+    width: 50%;
     max-width: 200px;
-    z-index:0;
+    z-index: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -83,8 +83,9 @@ main {
     display: none;
 }
 
+
 /*För menyn hover */
-nav a:hover {
+#globnav a:hover {
     text-decoration: underline;
 }
 
@@ -136,6 +137,33 @@ footer {
     width: 50%;
 }
 
+.posts {
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.posts img {
+    margin-right: 15px;
+    float: right;
+    max-width: 20%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.posts h3,
+.posts p{
+    margin-left: 15px;
+    display: block;
+    margin: 2px 0 0 0;
+}
+
+
 
 /*Använt från labben, för mobila enheter och mindre fönster */
 @media screen and (max-width: 740px) {
@@ -159,15 +187,15 @@ footer {
     header img {
         max-width: 1000px;
         margin: 0 auto;
-        width:50%;
+        width: 50%;
         max-width: 100px;
-        z-index:0;
+        z-index: 0;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        
+
     }
-    
+
     #menuicon {
         /*Bra image som återanvänds*/
         background-image: url(../img/menuicon.png);
