@@ -135,8 +135,12 @@ footer {
     width: 50%;
 }
 
-.qaTitle {
+.titles {
     text-align: center;
+    background-color:#f0f4f8;
+    color:#000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
 }
 .qa {
