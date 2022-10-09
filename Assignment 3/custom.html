@@ -7,107 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<!-- Jobbade ifrån F7c-ex1 för denna sida-->
 
 <body>
     <nav>
         <ul id="globnav">
             <li><a href="index.html">Startsida</a></li>
             <li><a href="products.html" class="currentPage">Vårt sortiment</a></li>
-            <li><a href="about.html">Om oss</a></li>
+            <li><a href="about.html">Om butiken</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Kontakta oss</a></li>
         </ul>
         <ul id="locnav">
-            <li><a href="products.html" >Alla produkter</a></li>
+            <li><a href="products.html">Alla produkter</a></li>
             <li><a href="tempproducts.html">Temporära produkter</a></li>
             <li><a href="custom.html" class="currentPage">Anpassad order</a></li>
         </ul>
     </nav>
     <header>
-        <img src="img/svettv1.png" alt="logo">
-    </header>
-    <header>
         <img src="img/svettalt.png" alt="logo">
+    </header>
 
-        <main>
-            <form id="orderForm" name="contactForm" method="post">
-    
-                <p>Vill du göra en speciell order eller har du allmänna frågor?</p>
-                <p>Kolla även vår FAQ innan du skickar</p>
-                <p>Fyll i uppgifterna nedan så kontaktar vi dig så fort som möjligt</p>
-                <b>(fält med * är obligatoriska)</b>
-    
-                <fieldset id="deliveryDate">
-                    <legend>Leveransdag</legend>
-                    <p>Du kan endast beställa max tre månader i förväg. — Vill du ha leverans idag, måste du beställa senast
-                        kl. 12.</p>
-                    <label>* Datum: <input type="date" name="delivery-date" required></label>
-                    <!-- min och max i input-elementet kan sättas av JavaScript, så att det inte går att beställa före dagens datum och max 3 månader framåt. Men det tar vi i en annan kurs ... -->
-                </fieldset>
-    
-                <fieldset id="receiver">
-                    <legend>Mottagare</legend>
-                    <div class="twoColumns">
-                        <!-- Endast elementen inom div ska delas upp i kolumner -->
-                        <label for="r_name">* Namn: </label>
-                        <input type="text" name="r_name" id="r_name" required>
-                        <label for="r_street">* Gatuadress: </label>
-                        <input type="text" name="r_street" id="r_street" required>
-                        <label for="r_zip">* Postnr: </label>
-                        <input type="text" name="r_zip" id="r_zip" required>
-                        <label for="r_town">* Ort: </label>
-                        <input type="text" name="r_town" id="r_town" required>
-                        <label for="r_telephone">* Telefon: </label>
-                        <input type="text" name="r_telephone" id="r_telephone" required>
-                    </div>
-                    <label>
-                        <input type="checkbox" name="r_door"> Blommorna får lämnas utanför dörren, om mottagaren inte är
-                        hemma
-                    </label>
-                </fieldset>
-    
-                <fieldset id="card">
-                    <legend>Kort till mottagaren</legend>
-                    <label>* Text på kortet (max 200 tecken):
-                        <textarea name="card" maxlength="200" required></textarea>
-                    </label>
-                </fieldset>
-    
-                <fieldset id="client">
-                    <legend>Dina uppgifter</legend>
-                    <div class="twoColumns">
-                        <!-- Endast elementen inom div ska delas upp i kolumner -->
-                        <label for="c_name">* Namn: </label>
-                        <input type="text" name="c_name" id="c_name" required>
-                        <label for="c_email">* Epost: </label>
-                        <input type="text" name="c_email" id="c_email" required>
-                        <label for="c_telephone">Telefon: </label>
-                        <input type="text" name="c_telephone" id="c_telephone">
-                    </div>
-                    <div id="payment">
-                        <h4>Betalningssätt</h4>
-                        * Betala med:
-                        <label>
-                            <input type="radio" name="pay_method"> Faktura
-                        </label>
-                        <label>
-                            <input type="radio" name="pay_method" checked="checked"> Kreditkort
-                        </label>
-                        <!-- Om faktura väljs, ska fält för fakturaadress visas. -->
-                        <!-- Om kreditkort väljs, ska man komma till en betaltjänst. -->
-                        <!-- Vi tar dock inte upp något av det här. -->
-                    </div>
-                    <label>* <input type="checkbox" name="acceptTerms" required> Jag accepterar <a
-                            href="kopvillkor.html">köpvillkoren</a></label>
-        </main>
-    
-        <footer>
-            <p>Öppetider: </p>
-            <p>Vardagar 10:00 &#8722 19:00 <br>
-                Helgdagar 10:00 &#8722 17:00 </br></p>
-            <p> Kontaktadress: <a href="mailto:alva@marinbutik.com">alva@marinbutik.com</a></p>
-            <p>Copyright © 2022 Marine i Simrishamn AB. All Rights Reserved</p>
-        </footer>
+    <main>
+        <div class="titles">
+            <h2>Anpassad order</h2>
+            <p>Vill du göra en speciell order eller vill du bli en distributör?</p>
+        </div>
+        <form id="orderForm" name="orderForm" method="post">
+
+            <p>Kolla vår FAQ <a href="faq.html">här</a> innan du skickar.</p>
+            <p>Fyll i uppgifterna nedan så kontaktar vi dig så fort som möjligt</p>
+
+            <div class="customOrder">
+                <form action="action_page.php">
+
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="firstname" placeholder="Ditt fullständiga namn" required>
+
+                    <label for="telephone">Telefonnummer</label>
+                    <input type="text" id="telephone" name="lastname" placeholder="Ditt telefonnummer" required>
+
+                    <label for="email">E-postadress</label>
+                    <input type="email" id="email" name="email" placeholder="Din E-postadress" required>
+
+                    <label for="address">Adress</label>
+                    <input type="text" id="address" name="address" placeholder="Din address" required>
+
+                    <label for="address">Postort</label>
+                    <input type="text" id="ort" name="ort" placeholder="Din Postort" required>
+
+                    <label for="postnummer">Postnummer</label>
+                    <input type="number" id="postnumber" name="postnummer" placeholder="Ditt Postnummer" required>
+
+
+
+                    <label for="cause">Kontaktorsak</label>
+                    <select id="cause" name="cause">
+                        <option value="customorder">Anpassad produkt</option>
+                        <option value="bulkorder">Stormängdsorder (50st eller över)</option>
+                        <option value="other">Annat</option>
+                    </select>
+
+                    <label for="subject">Subjekt</label>
+                    <textarea id="subject" name="subject" placeholder="Kortfattat meddelande kring kontakt.."
+                        style="height:200px" required></textarea>
+
+                    <label><input type="checkbox" name="acceptTerms" required> Jag accepterar <a href="index.html"
+                            target="_blank">användarvillkoren</a></label>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+    </main>
+
+    <footer>
+        <p>Öppetider: </p>
+        <p>Alla dagar 10:00 &#8722 17:00</p>
+        <p>Address: Hittepågatan 7, Simrishamn</p>
+        <p>E-postaddress: <a href="mailto:alva@marinbutik.com">alva@marinbutik.com</a></p>
+        <p>Copyright © 2022 Marine i Simrishamn AB. All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>
