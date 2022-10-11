@@ -186,6 +186,7 @@ footer {
     margin: 2px 0 0 0;
 }
 
+/* Jobbade ifrån F7b-ex2 */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +217,7 @@ footer {
 .products p {
     margin: 0;
 }
+
 .products p {
     font-size: 80%;
 }
