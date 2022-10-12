@@ -90,6 +90,7 @@ main {
 #globnav a:hover {
     text-decoration: underline;
 }
+
 /* markera currentpage */
 nav a.currentPage {
     background-color: rgb(7, 116, 160);
@@ -139,6 +140,7 @@ footer {
     margin-right: auto;
     width: 50%;
 }
+
 /*titlarna för sidorna */
 .titles {
     text-align: center;
@@ -148,6 +150,7 @@ footer {
     padding-bottom: 15px;
 
 }
+
 /* animation för vanliga frågor */
 .qa {
     padding: 10px;
@@ -164,6 +167,10 @@ footer {
     height: 2.50em;
 }
 
+#maps {
+    border: 0;
+}
+
 /* index "posts" */
 .posts {
     border-radius: 5px;
@@ -173,7 +180,7 @@ footer {
     padding: 20px;
     overflow: hidden;
     margin-bottom: 10px;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 
 .posts img {
@@ -184,6 +191,7 @@ footer {
     margin-bottom: 5px;
     transition: all 150ms ease;
 }
+
 .posts img:hover {
     transform: scale(1.5);
     cursor: pointer;
@@ -305,6 +313,10 @@ input[type=submit]:hover {
         margin-left: auto;
         margin-right: auto;
 
+    }
+
+    #maps {
+        display: none;
     }
 
     #menuicon {
