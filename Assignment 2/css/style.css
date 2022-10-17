@@ -75,7 +75,7 @@ main {
 /*För menyn hover */
 nav a:hover {
     background-color: #207698;
-    color: #000000; 
+    color: #000000;
 }
 
 nav a.currentPage {
@@ -165,7 +165,7 @@ footer {
 
 
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-width: 650px) {
     body {
         grid-template-columns: auto;
         grid-template-rows: min-content min-content auto min-content;
