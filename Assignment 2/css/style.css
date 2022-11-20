@@ -164,20 +164,8 @@ footer {
 }
 
 
-
-@media only screen and (orientation: landscape) and (max-width: 650px) {
-    body {
-        grid-template-columns: auto;
-        grid-template-rows: min-content min-content auto min-content;
-        grid-template-areas:
-            "header header"
-            "main nav"
-            "footer footer";
-    }
-}
-
 /*Använt från labben, för mobila enheter och mindre fönster */
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 1025px) {
     body {
         grid-template-columns: auto;
         grid-template-rows: min-content min-content auto min-content;
@@ -187,6 +175,9 @@ footer {
             "main"
             "footer";
     }
+    nav {
+        border-style: none;
+    }
 
     nav ul {
         flex-direction: row;
@@ -194,7 +185,29 @@ footer {
     }
 }
 
+@media screen and (max-width: 740px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content auto min-content;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    nav ul {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+}
+
 @media screen and (max-width: 400px) {
+    nav {
+        border-bottom-style: solid;
+    }
+
+    
     #menuicon {
         /*Bra image som återanvänds*/
         background-image: url(../img/menuicon.png);
