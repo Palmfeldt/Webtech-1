@@ -175,6 +175,7 @@ footer {
             "main"
             "footer";
     }
+
     nav {
         border-style: none;
     }
@@ -203,11 +204,19 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
+    body {
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+
     nav {
         border-bottom-style: solid;
     }
 
-    
+
     #menuicon {
         /*Bra image som återanvänds*/
         background-image: url(../img/menuicon.png);
