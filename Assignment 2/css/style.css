@@ -164,7 +164,7 @@ footer {
 }
 
 
-/*Använt från labben, för mobila enheter och mindre fönster */
+
 @media screen and (max-width: 1025px) {
     body {
         grid-template-columns: auto;
@@ -202,7 +202,7 @@ footer {
         justify-content: flex-end;
     }
 }
-
+/*Använt från labben, för mobila enheter och mindre fönster */
 @media screen and (max-width: 400px) {
     body {
         grid-template-areas:
