@@ -45,6 +45,7 @@ body {
         ". nav ."
         ". main ."
         " footer footer footer";
+    overflow-y: scroll;
 }
 
 header {
